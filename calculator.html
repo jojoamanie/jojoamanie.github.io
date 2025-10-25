@@ -1,0 +1,53 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+
+        </head>
+        <body>
+        <div class="container">
+            <input type="text" class="display" id="display" >
+            <div class="button">
+        <p></p>
+    <button onclick="calculate('C')">C</button>
+    <button onclick="calculate('%')">%</button>
+    <button onclick="calculate('*')">X</button>
+    <button onclick="calculate('/')">/</button>
+    <p></p>
+    <button onclick="calculate('7')">7</button>
+    <button onclick="calculate('8')">8</button>
+    <button onclick="calculate('9')">9</button>
+    <button onclick="calculate('*')">X</button>
+    <p></p>
+    <button onclick="calculate('4')">4</button>
+    <button onclick="calculate('5')">5</button>
+    <button onclick="calculate('6')">6</button>
+    <button onclick="calculate('-')">-</button>
+    <p></p>
+    <button onclick="calculate('3')">3</button>
+    <button onclick="calculate('2')">2</button>
+    <button onclick="calculate('1')">1</button>
+    <button onclick="calculate('+')">+</button>
+    <p></p>
+    <button onclick="calculate('0')">0</button>
+    <button onclick="calculate('.')">.</button>
+    <button onclick="calculate('=')">=</button>
+
+</div>
+        </div>
+        
+        
+        <SCRipt>
+            const display = document.getElementById('display')
+
+
+            function calculate(value){
+                 display.value += value;
+            }
+            
+console.log(calculate)
+        </SCRipt>
+        </body>
+        </html>

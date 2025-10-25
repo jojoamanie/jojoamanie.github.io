@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(99, 99, 197);
+        }
+        .butt{
+            color:red;
+            background-color: rgb(8, 6, 1);
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            border: none;
+            font-size:larger;
+            font-weight: bolder;
+        }
+        .clear{
+            margin: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            border: none;
+            background-color: black;
+            color: green;
+            font-size: larger;
+            font-weight: bolder;
+        }
+       .screen{
+        width: 200px;
+        height: 100px;
+        margin-top: 10px;
+        border-radius: 15px;
+        border: none;
+        background-color: black;
+        color: red;
+        font-size: larger;
+        font-weight: bolder;
+       }
+       .calculator{
+        display: flex; 
+        flex-direction: column;
+        
+        width: 400px;
+        margin-left: 500px;
+        margin-top: 60px;
+        box-shadow: 10px 10px;
+       }
+       .equal{
+        background-color: rgb(9, 206, 58);
+        color: black;
+         width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            border: none;
+            font-size:larger;
+            font-weight: bolder;
+            margin: 10px;
+       }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="button">
+            <button class="clear" onclick="clearResult()">C</button>
+           
+        <input class="screen" type="text" id="jojo" disabled>
+        <p></p>
+        <button class="butt" onclick="appendValue('/')">/</button>
+        <button class="butt" onclick="appendValue('*')">*</button>
+        <button class="butt" onclick="appendValue('-')">-</button>
+        <button class="butt" onclick="appendValue('7')">7</button>
+        <p></p>
+        <button class="butt" onclick="appendValue('8')">8</button>
+        <button class="butt" onclick="appendValue('9')">9</button>
+        <button class="butt" onclick="appendValue('+')">+</button>
+        <button class="butt" onclick="appendValue('4')">4</button>
+             <p></p>
+        <button class="butt" onclick="appendValue('5')">5</button>
+        <button class="butt" onclick="appendValue('6')">6</button>
+        <button class="butt" onclick="appendValue('.')">.</button>
+        <button class="butt" onclick="appendValue('1')">1</button>
+        <p></p>
+        <button class="butt" onclick="appendValue('2')">2</button>
+        <button class="butt" onclick="appendValue('3')">3</button>
+        <button class="butt" onclick="appendValue('0')">0</button>
+         <button onclick="calculate()" class="equal">=</button>
+        </div>
+    </div>
+    <script>
+        let answer = document.getElementById('jojo');
+        function appendValue(value){
+            answer.value += value;
+        }
+        function clearResult(){
+            answer.value ="";
+
+        }
+        
+        
+
+        function calculate(){
+            try{
+                answer.value =eval(answer.value);
+            } catch{
+                answer.value ="Error";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <input type="text" placeholder="$50" class="js-cost">
+            <button onclick="calculate()">pay</button> 
+            <p class="js-display"></p>
+
+            <script>
+        function calculate(){
+    const input = document.querySelector('.js-cost');
+    let cost = Number(input.value);
+
+       if (cost < 50) {
+        cost = '';
+       }
+         document.querySelector('.js-display').innerHTML = `$${cost}`
+        }
+
+            </script>
+        </body>
+        </html>

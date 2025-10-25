@@ -1,0 +1,256 @@
+  .amanie{
+            width: 320px;
+            height: 150px;
+            object-fit: fill;
+            
+            
+        }
+        p{
+            font-family:  Arial;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        body{
+            margin: 0px;
+            padding-top: 80px;
+            padding-left: 96px;
+            padding-right: 30px;
+            background-color: rgb(248, 248, 248);
+        }
+        .video-title{
+            margin-top: 0px;
+            margin-top: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 12px;
+        }
+        .video-autor,
+        .video-stat{
+         display: block;
+         font-size: 12px;
+         color: rgb(96, 96, 96);
+         font-weight: 500;
+        }
+        .video-autor{
+            margin-bottom: 4px;
+        }
+        .channel{
+            display: inline-block;
+            width: 50px;
+            vertical-align: top;
+        }
+        .video-info{
+            display: inline-block;
+            width: 200px;
+        }
+        .channel-pic2{
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            margin-top: 5px;
+        }
+        
+        .video-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 16px;
+            row-gap: 40px;
+        }
+        .header{
+            height: 55px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            border-bottom-width:1px ;
+            border-bottom-style:solid ;
+             border-bottom-color: rgb(230, 212, 212);
+             z-index: 100;
+        }
+        .left-section{
+            
+            
+            align-items: center;
+            display: flex;
+        }
+        .middle-section{
+            
+            flex: 1;
+            margin-left: 70px;
+            margin-right: 35px;
+            max-width: 500px;
+            display: flex;
+            align-items: center;
+        }
+        .right-section{
+            margin-right: 20px;
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+        .search{
+            flex: 1;
+            height: 34px;
+            padding-left: 10px;
+            font-size: 16px;
+            border-width: 1px ;
+            border-style:solid ;
+            border-color: rgb(182, 178, 178);
+            border-radius: 2px;
+            box-shadow: inset 1px 2px 4px
+            rgba(0, 0, 0, 0.05);
+            width: 0px;
+        }
+        .search::placeholder{
+            font-family: Arial;
+            font-size: 16px;
+        }
+        .hamburger{
+            height: 25px;
+            margin-left: 24px;
+            margin-right: 20px;
+             cursor: pointer;
+        }
+        .youtube-logo{
+            height: 20px;
+             cursor: pointer;
+             width: 150px;
+        }
+        .search-button{
+            height: 39px;
+            width: 60px;
+            background-color: white;
+            border-style:solid ;
+            border-color:rgb(218, 213, 213);
+            border-width: 1px;
+            margin-left: -1px;
+            margin-right: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+        .search-button .tooltip,
+        .voice-button .tooltip
+        {
+            position: absolute;
+            background-color: gray;
+            color: white;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-radius: 2px;
+            font-size: 12px;
+            bottom: -30px;
+            opacity: 0;
+            transition: opacity 0.15s;
+            pointer-events: none;
+        }
+        .search-button:hover .tooltip,
+        .voice-button:hover .tooltip
+        {
+            opacity: 1;
+        }
+        
+        .voice-button{
+            height: 39px;
+            border-radius: 20px;
+            background-color:rgb(253, 241, 241);
+            border-style:solid ;
+            border-color: whitesmoke;
+           cursor: pointer;
+            border: none;
+            
+        }
+        .profile-icon{
+            width: 30px;
+            height: 32px;
+            border-radius: 16px;
+             cursor: pointer;
+        }
+        .upload-icon{
+            border: none;
+             cursor: pointer;
+        }
+        .youtube-app{
+            border: none;
+            cursor: pointer;
+        }
+        .notification-icon{
+           cursor: pointer;
+              border: none;
+        }
+        .notification-container{
+            position: relative;
+        }
+        .notification-count{
+            position: absolute;
+            top: 10px;
+            right: 65px;
+            background-color: rgb(214, 9, 9);
+            color: white;
+            font-family: Arial;
+            font-weight: 600;
+            font-size: 12px;
+            border-radius: 10px;
+            padding-left: 1px;
+            padding-right: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+
+    
+        }
+        .sidebar{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: 55px;
+            background-color: white;
+            width: 72px;
+        }
+        .video-time{
+            font-family: Arial;
+            font-size: 12px;
+            font-weight: 500;
+            background-color: black;
+            color: white;
+            position: absolute;
+            bottom: 8px;
+            right: 5px;
+            padding-left: 4px;
+            padding-right: 4px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-radius: 2px;
+        }
+        .amanie-row{
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .sidebar-link{
+            z-index: 200px;
+            height: 76px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 5px;
+            cursor: pointer;
+            
+            
+        }
+        .sidebar-link:hover{
+        background-color: rgb(235, 231, 231);
+        }
+        .sidebar-link div{
+            font-family: Arial;
+            font-size: 12px;
+            margin-top: 5px;
+            
+        }

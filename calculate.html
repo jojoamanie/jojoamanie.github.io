@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .in{
+        width: 250px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        background-color:  black ;
+        color: white;
+    }
+    .cal{
+         width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(182, 7, 7);
+        color: white;
+    }
+</style>
+<body>  
+      <p>Amazon shipping calculator</p>
+      <p>orders under $40 =+ $10 shipping</p>
+      <p>orders over $40 = FREE shipping</p>
+      <input type="text" placeholder="cost of order" class="in"  id="jo">
+      <button onclick="calculateProduct()" class="cal">calculate</button>
+      <p id="product"></p>
+      <script>
+        function calculateProduct(){
+        let input= document.getElementById('jo');
+        let cost =Number(input.value);
+        if (cost <= 40){
+        cost =cost +10;
+        }
+        document .getElementById('product').innerHTML= ` $${cost}`;
+        }
+      </script>
+</body>
+</html>
