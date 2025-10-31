@@ -22,7 +22,10 @@ body{
 }
 
 .container{
-    padding: 5px 5%;
+    max-width: 1200px;
+    margin: auto;
+    padding:  0 16px;
+
 }
 nav{
     display: flex;
@@ -360,8 +363,21 @@ nav .fa-solid{
     
 }
 /*------media-----*/
-@media only screen and (max-width: 700px){
-    .pro1{
+@media only screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .container{
+        max-width: 100%;
+        padding: 0 12px;
+    }
+    
+       .pro1{
     display: inline-block;
         background-image: url(images/1000249854.jpg);
         background-size:contain ;
