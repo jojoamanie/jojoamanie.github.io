@@ -364,6 +364,17 @@ nav .fa-solid{
 }
 /*------media-----*/
 @media only screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        max-width:100%;
+        padding: 0 12px;
+    }
+    img .pro1{
+        max-width: 100%;
+        height: auto;
+    }
     .pro1{
     display: inline-block;
         background-image: url(images/1000249854.jpg);
