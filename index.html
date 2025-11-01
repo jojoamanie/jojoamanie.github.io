@@ -48,10 +48,10 @@
                     intuitive interfaces!
                 </p>
                 <div class="tab-titles">
-                <p class="tab-links active-links" onclick="opentab('experience')">Experience</p> 
+                <p class="tab-links active-links">Experience</p> 
          
                 </div>
-        <div class="tab-contents active-tab" id="experience">
+        <div class="tab-contents active-tab" >
             <ul>
                 <li><span>Two Years Experience</span><br>
                 and i developed and maintained responsive website! </li>
@@ -166,12 +166,12 @@
             </div>
             <div class="contact-right">
                 <form id="contact-form" method='post' action="portfolio.php">
-                    <input type="text" name="user-name" placeholder="Your Name" required>
-                     <input type="email" name="user-email" placeholder="Your E-mail" required>
-                     <textarea name="message" rows="6" placeholder="Your Message" required> </textarea>
+                   Name: <input type="text" name="user-name" placeholder="Your Name" required>
+                   E-mail:  <input type="email" name="user-email" placeholder="Your E-mail" required>
+                    Message:<textarea name="message" rows="6" placeholder="Your Message" required> </textarea>
                      <button type="submit" class="btn btn2">Submit</button>
                 </form>
-                <p id="status"></p>
+                
             </div>
         </div>
     </div>
@@ -186,16 +186,8 @@
 
    </footer>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "J1gWV8R1CLFDLWfbC",
-      });
-   })();
-</script>
-</script>
+
+
   <script>
     let sidemenu=document.getElementById("sidemenu");
     function openmenu(){
