@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // Redirect if accessed directly without form submission
-    header("Location: contact.html");
+    header("Location: index.html");
     exit();
 }
 ?>
