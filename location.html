@@ -1,0 +1,53 @@
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Location</title>
+                <style>
+                 body{
+                    background-image: url(images/port.png);
+                    font-family: Impact,  'Arial Narrow Bold', sans-serif;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    color: white;
+                 }
+                 .btn{
+                    background-color: black;
+                    color: aliceblue;
+                    width: 100px;
+                    height: 35px;
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 3px 3px #ff0a4f;
+                    cursor: pointer;
+                 }
+                 .btn:hover{
+                    transform: translateX(4px);
+                 }
+                 span{
+                    color: #ff0a4f;
+                 }
+                </style>
+            </head>
+            <body>
+            <h1>Your Geolocation</h1>
+            <p ></p>Find my <span>location!</span> </p>
+            <button onclick="getLocation()" class="btn">Get Location</button>
+            <p id="amanie"></p>
+            <script>
+                let locate =document.getElementById('amanie');
+                function getLocation(){
+                    try{
+                        navigator.geolocation.getCurrentPosition
+                        (showPosition);
+                    } catch (err) {
+                        locate.innerHTML = err;
+                    }
+                }
+                function showPosition(position){
+                    locate.innerHTML = "Latitude: " + position.coords.latitude
+                    + "<br> Longitude: " + position.coords.longitude;
+                }
+            </script>
+            </body>
+            </html>
