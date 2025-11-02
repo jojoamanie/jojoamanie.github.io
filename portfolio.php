@@ -1,12 +1,12 @@
 
 
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
-    $name = htmlspecialchars(trim($_GET['name']));
-    $email = htmlspecialchars(trim($_GET['email']));
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['email']));
     
-    $message = htmlspecialchars(trim($_GET['message']));
+    $message = htmlspecialchars(trim($_POST['message']));
 
     // Your email address where you want to receive messages
     $to = "jojoamanie2@gmail.com"; // Replace with your actual email address
