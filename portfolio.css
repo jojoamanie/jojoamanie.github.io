@@ -15,9 +15,9 @@ body{
     display: inline-block;
     margin-left: 800px;
     margin-top: -300px;
-    width: 80vh;
-    height: 80vh;
-    border-radius: 40vh;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 25vh;
     box-shadow: 5px 5px 10px 10px #ff004f;
 }
 
@@ -347,6 +347,9 @@ font-size: 18px;
 margin-top: 20px;
 cursor: pointer;
 }
+.btn2{
+    margin-right: 150px;
+}
 .copyright{
   width: 100%; 
   text-align: center; 
@@ -362,10 +365,20 @@ nav .fa-solid{
     display: none;
     
 }
+.radio{
+    font-weight: 900;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+ 
+}
+
 /*------media-----*/
 @media only screen and (max-width: 600px){
     body{
-        overflow-x: hidden;
+        flex-basis: auto;
     }
     .container{
         max-width:100%;
@@ -439,7 +452,7 @@ nav ul .fa-solid{
     margin-right: 20px;
 }
 .contact-left, .contact-right{
-    flex-basis: 100%;
+    flex-basis: 50%;
 }
 .copyright{
     font-size: 14px;

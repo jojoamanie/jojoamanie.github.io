@@ -1,35 +1,20 @@
 <?php
-$servername = "localhost"; // Your server name
-$username = "your_username"; // Your database username
-$password = "your_password"; // Your database password
-$dbname = "portfolio"; // Your database name
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Get form data
-$email = $_POST['email'];
 $name = $_POST['name'];
+$email = $_POST['email'];
 $message = $_POST['message'];
+$gender = $_POST['gender'];
+// database connection
+$conn = new mysqli('localhost', 'root', '', 'test');
+if($conn->connect_error){
+    die('Connection Failed :'.$conn->connect_error);
 
-// Prepare and bind the SQL statement
-$sql = "INSERT INTO form (email, name, message) VALUES (?, ?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("ss", $email, $name, $message);
-
-// Execute the statement
-if ($stmt->execute()) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+}else{
+    $stmt = $conn->prepare("insert into form(name, email, message, gender)value(?,?,?,?"){
+        $stmt->bind_param("ssss",$name, $email, $message, $gender);
+        $stmt->execute();
+        echo "registration successfully...";
+        $stmt->close();
+        $conn->close()
+    }
 }
-
-$stmt->close();
-$conn->close();
 ?>
-

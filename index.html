@@ -168,14 +168,16 @@
                 <a href="images/Website_Development_Roadmap.pdf"  download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form action="db.php"  method="POST">
-                   Name: <input type="text" name="name" placeholder="Your Name" required>
-                   E-mail:  <input type="email" name="email" placeholder="Your E-mail" required>
-                    Message:<textarea name="message" rows="6" placeholder="Your Message" required> </textarea>                                      
-                    <input type="radio" name="gender"  value="female">Female
-                    <input type="radio" name="gender"  value="male">  Male
-                    <input type="radio" name="gender"  value="other"> Other 
-                     <input type="submit" name="submit" class="btn btn2">
+                <form action="db.php" method="POST">
+                
+            <label>Name</label> <input type="text" name="name" placeholder="Your Name" required>
+            <lebel>E-mail: </lebel> <input type="email" name="email" placeholder="Your E-mail" required>
+            <label>Message</label><textarea name="message" rows="5"  required> </textarea>
+
+            <lebel class="radio">Female</lebel> <input type="radio" name="gender" value="female">
+            <lebel class="radio"> Male</lebel> <input type="radio" name="gender" value="male"> 
+            <label class="radio"> Other </label> <input type="radio" name="gender" value="other">
+            <input type="submit" name="submit" class="btn btn2">
                 </form>
                 
             </div>
