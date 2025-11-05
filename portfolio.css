@@ -10,22 +10,9 @@ body{
      background-position: center;
     color: #fff;
 }
-
-.pro{
-    display: inline-block;
-    margin-left: 800px;
-    margin-top: -300px;
-    width: 50vh;
-    height: 50vh;
-    border-radius: 25vh;
-    box-shadow: 5px 5px 10px 10px #ff004f;
-}
-
 .container{
-    max-width: 1200px;
     margin: auto;
     padding:  0 16px;
-
 }
 nav{
     display: flex;
@@ -48,11 +35,9 @@ nav{
     font-weight: 900;
     font-family: arial black;
     color: #fff;
-
 }
 .logo span{
     color: #ff004f;
-
 }
 nav ul li{
     display: inline-block;
@@ -64,21 +49,29 @@ nav ul li a{
     color:#fff;
     text-decoration: none;
     font-size: 25px;
-       right: 25px;
-       
+       right: 25px;      
 }
 span{
     color: #ff004f;
 }
 nav ul li a:hover{
-    
-    
     height: 3px;
     color: #862c03;
-    
- 
+}
+.row-col-md-12{
+
+
 }
 
+.pro{
+    display: inline-block;
+    margin-left: 800px;
+    margin-top: -300px;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 25vh;
+    box-shadow: 5px 5px 10px 10px #ff004f;
+}
 .header-text{
     margin-top: 80px;
     font-size: 30px;
@@ -283,8 +276,7 @@ flex-basis: 35%;
 }
 .contact-right{
 flex-basis: 60%;
-box-shadow: 5px 5px 10px 10px #ff004f;
-border-radius: 15px;
+
 }
 .contact-left p{
     margin-top: 30px;
@@ -328,6 +320,8 @@ border-radius: 15px;
 }
 .contact-right form{
     width: 100%;
+    box-shadow: 5px 5px 5px 5px #ff004f;
+border-radius: 15px;
 }
 form input, form textarea{
 width: 100%;
@@ -377,31 +371,7 @@ nav .fa-solid{
 
 /*------media-----*/
 @media only screen and (max-width: 600px){
-    body{
-        flex-basis: auto;
-    }
-    .container{
-        max-width:100%;
-        padding: 0 12px;
-    }
-    img .pro1{
-        max-width: 100%;
-        height: auto;
-    }
-    .pro1{
-    display: inline-block;
-        background-image: url(images/1000249854.jpg);
-        background-size:contain ;
-        background-repeat: no-repeat;
-        background-position: right;
-        width: 100vh;
-        height: 50vh;
-        margin-top: -300px;
-        border-radius: 15px;
-        box-shadow: 5px 5px 10px 10px #ff004f;
-        
 
-    }
     .header-text{
         margin-top: 100px;
         font-size: 16px;
