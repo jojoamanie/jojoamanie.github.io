@@ -5,9 +5,10 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(images/port.png);
+    background-image: url(images/gadget.jpg);
     background-size: cover;
      background-position: center;
+     background-repeat: no-repeat;
     color: #fff;
 }
 .container{
@@ -373,9 +374,10 @@ nav .fa-solid{
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    
+    backdrop-filter: blur(50px);
     text-align: center;
       margin-bottom: 30px;
+      border-radius: 20px;
 }
 
 /* Text area */
@@ -383,16 +385,22 @@ nav .fa-solid{
     margin-bottom: 10px;
     color: #ff004f;
     font-family: Arial, black;
+    font-size: 20px;
+ font-weight: 800;
 }
 .stack-title p {
     line-height: 1.6;
-    color: #000;
+    color: #fdfafa;
+    font-size: 20px;
+    font-weight: 700;
 }
 .stack-title h2{
     margin-bottom: 10px;
     color: #fff;
     font-family: Arial, black;
- color: #000;
+ color: #f7f0f0;
+ font-size: 40px;
+ font-weight: 900;
 }
 
 /* Image grid */
