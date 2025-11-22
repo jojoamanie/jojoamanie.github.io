@@ -63,16 +63,6 @@ nav ul li a:hover{
 
 
 }
-
-.pro{
-    display: inline-block;
-    margin-left: 800px;
-    margin-top: -300px;
-    width: 50vh;
-    height: 50vh;
-    border-radius: 25vh;
-    box-shadow: 5px 5px 10px 10px #ff004f;
-}
 .header-text{
     margin-top: 80px;
     font-size: 30px;
@@ -320,7 +310,7 @@ flex-basis: 60%;
     margin-left: 180px;
 }
 .contact-right form{
-    width: 100%;
+    width: 80%;
     box-shadow: 5px 5px 5px 5px #ff004f;
 border-radius: 15px;
 }
@@ -360,15 +350,7 @@ nav .fa-solid{
     display: none;
     
 }
-.radio{
-    font-weight: 900;
-    font-size: larger;
-    display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    
- 
-}
+
 /* Container */
 .stack {
     max-width: 500px;
@@ -433,64 +415,79 @@ nav .fa-solid{
 }
 
 
+/* ================================
+   📱 MOBILE SCREEN (max-width: 600px)
+================================ */
+@media (max-width: 600px) {
 
-/* -------------------------------------------------- */
-/*                 📱 MOBILE RESPONSIVE               */
-/* -------------------------------------------------- */
-@media (max-width: 768px) {
-
-    /* NAVIGATION */
-    nav ul {
-        position: fixed;
-        background: #000;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100%;
-        padding-top: 60px;
-        transition: 0.5s;
-        display: block;
-        z-index: 200;
+    /* BODY */
+    body {
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
     }
 
-    nav ul li {
-        display: block;
-        margin: 20px;
+    nav {
+        
+        height: auto;
+        padding: 10px;
+    }
+    /* CONTAINER */
+    .container {
+        padding: 0 12px;
+        
+    }
+
+    /* NAVBAR */
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 180px;
+        height: 100vh;
+        background: #000;
+        padding-top: 60px;
+        transition: 0.5s;
         text-align: left;
+    }
+
+    nav ul li a {
+        font-size: 20px;
     }
 
     nav .fa-solid {
         display: block;
+        color: #fff;
         font-size: 30px;
         cursor: pointer;
-        z-index: 300;
+    }
+
+    nav ul .fa-circle-xmark {
+        position: absolute;
+        top: 20px;
+        left: 20px;
     }
 
     /* LOGO */
     .logo {
-        font-size: 35px;
+        font-size: 32px;
     }
 
     /* HERO SECTION */
-    .row-col-md-12 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
     .header-text {
-        margin-top: 100px;
+        margin-top: 120px;
+        text-align: center;
         font-size: 20px;
     }
 
     .header-text h1 {
         font-size: 30px;
+        line-height: 36px;
     }
-
+ 
   
 
-    /* ABOUT */
+    /* ABOUT SECTION */
     .row {
         flex-direction: column;
         text-align: center;
@@ -502,91 +499,94 @@ nav .fa-solid{
     }
 
     .about-col-1 img {
-        width: 70vw;
-        margin: auto;
+        width: 150px;
+        margin-bottom: 20px;
     }
 
     .sub-title {
-        font-size: 40px;
+        font-size: 35px;
     }
 
-    /* SERVICES / SKILLS GRID */
+    .abt {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /* SKILLS SECTION */
     .services-list {
         grid-template-columns: 1fr;
+        grid-gap: 20px;
     }
 
-    /* PORTFOLIO GRID */
+    /* PORTFOLIO SECTION */
     .work-list {
         grid-template-columns: 1fr;
     }
 
     .work img {
-        height: auto;
+        height: 30vh;
     }
 
-    /* CONTACT */
+    /* TECH STACK */
+    .stack {
+        max-width: 75%;
+        padding: 15px;
+    }
+
+    .stack-title h2 {
+        font-size: 28px;
+    }
+
+    .stack-title p {
+        font-size: 16px;
+    }
+
+    .stack-log {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .log img {
+        width: 55px;
+    }
+
+    /* CONTACT SECTION */
     .contact-left,
     .contact-right {
         flex-basis: 100%;
         text-align: center;
     }
 
-    .btn.btn2 {
+    form input,
+    form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    form .btn2 {
+        margin: 0 auto;
+        
+    }
+
+    .btn2 {
         margin-left: 0;
         margin-right: 0;
     }
 
-    form input,
-    form textarea {
-        font-size: 16px;
+    .social-icons {
+        justify-content: center;
+        text-align: center;
     }
 
-    /* COPYRIGHT */
+    /* FOOTER */
     .copyright {
         font-size: 14px;
-        padding: 15px;
+        padding: 15px 0;
     }
+
+    
 }
 
-/* -------------------------------------------------- */
-/*               📱 SMALL PHONES (<=480px)            */
-/* -------------------------------------------------- */
-@media (max-width: 480px) {
-
-    .logo {
-        font-size: 28px;
-    }
-
-    .header-text h1 {
-        font-size: 26px;
-    }
-
-    .header-text p {
-        font-size: 16px;
-    }
-
-    .pro {
-        width: 55vw;
-        height: 55vw;
-    }
-
-    .sub-title {
-        font-size: 32px;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-
-    .services-list div {
-        padding: 25px;
-    }
-
-    form input,
-    form textarea {
-        font-size: 14px;
-    }
-}
 
 
 #scrollUpBtn {
