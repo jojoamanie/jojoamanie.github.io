@@ -207,7 +207,7 @@ padding: 30px 0;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-     box-shadow: 5px 5px 10px  10px #ff004f;
+     box-shadow: 0 0 10px  5px #ff004f;
 }
 .work img{
     width: 100%;
@@ -368,168 +368,215 @@ nav .fa-solid{
     
  
 }
+/* Container */
+.stack {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    text-align: center;
+      margin-bottom: 30px;
+}
 
-/*------media-----*/
-/* =========================================
-   MOBILE PHONES (0 – 480px)
-   ========================================= */
-@media (max-width: 480px) {
+/* Text area */
+.stack-title h4 {
+    margin-bottom: 10px;
+    color: #ff004f;
+    font-family: Arial, black;
+}
+.stack-title p {
+    line-height: 1.6;
+    color: #000;
+}
+.stack-title h2{
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: Arial, black;
+ color: #000;
+}
 
-    nav {
-        padding: 10px;
-    }
+/* Image grid */
+.stack-log {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 5px;
+}
 
-    .logo {
-        font-size: 30px;
-    }
+/* Each logo box */
+.log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
 
+/* Image size */
+.log img {
+    width: 70px;     /* smaller image */
+    height: auto;
+    object-fit: contain;
+    border-radius: 50px;
+    box-shadow: 0 0 2px 2px #000;
+     transition: transform 0.3s ease;
+}
+.log img:hover{
+     transform: scale(1.15);
+}
+
+
+
+/* -------------------------------------------------- */
+/*                 📱 MOBILE RESPONSIVE               */
+/* -------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
     nav ul {
-        display: none; /* hide navbar links if you add hamburger */
+        position: fixed;
+        background: #000;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        padding-top: 60px;
+        transition: 0.5s;
+        display: block;
+        z-index: 200;
     }
 
-    .pro {
-        margin: 20px auto;
-        width: 30vh;
-        height: 30vh;
+    nav ul li {
         display: block;
+        margin: 20px;
+        text-align: left;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    /* LOGO */
+    .logo {
+        font-size: 35px;
+    }
+
+    /* HERO SECTION */
+    .row-col-md-12 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .header-text {
-        margin-top: 120px;
-        font-size: 22px;
-        text-align: center;
+        margin-top: 100px;
+        font-size: 20px;
     }
 
     .header-text h1 {
-        font-size: 32px;
-        text-align: center;
+        font-size: 30px;
     }
 
+  
+
+    /* ABOUT */
     .row {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
 
     .about-col-1,
     .about-col-2 {
         flex-basis: 100%;
-        text-align: center;
     }
 
-    .services-list,
+    .about-col-1 img {
+        width: 70vw;
+        margin: auto;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    /* SERVICES / SKILLS GRID */
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* PORTFOLIO GRID */
     .work-list {
         grid-template-columns: 1fr;
     }
 
+    .work img {
+        height: auto;
+    }
+
+    /* CONTACT */
     .contact-left,
     .contact-right {
         flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-
-    form input, form textarea {
-        font-size: 16px;
+        text-align: center;
     }
 
     .btn.btn2 {
-        margin: auto;
-        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+    }
+
+    /* COPYRIGHT */
+    .copyright {
+        font-size: 14px;
+        padding: 15px;
     }
 }
 
-
-
-/* =========================================
-   SMALL TABLETS / LARGE PHONES (481px – 768px)
-   ========================================= */
-@media (max-width: 768px) {
-
-    nav {
-        padding: 10px 15px;
-    }
+/* -------------------------------------------------- */
+/*               📱 SMALL PHONES (<=480px)            */
+/* -------------------------------------------------- */
+@media (max-width: 480px) {
 
     .logo {
-        font-size: 40px;
+        font-size: 28px;
+    }
+
+    .header-text h1 {
+        font-size: 26px;
+    }
+
+    .header-text p {
+        font-size: 16px;
     }
 
     .pro {
-        margin: 30px auto;
-        width: 35vh;
-        height: 35vh;
-        display: block;
+        width: 55vw;
+        height: 55vw;
     }
 
-    .header-text {
-        text-align: center;
-        margin-top: 150px;
+    .sub-title {
+        font-size: 32px;
     }
 
-    .row {
-        flex-direction: column;
-        align-items: center;
+    nav ul li a {
+        font-size: 20px;
     }
 
-    .about-col-1,
-    .about-col-2 {
-        flex-basis: 100%;
-        text-align: center;
+    .services-list div {
+        padding: 25px;
     }
 
-    .services-list,
-    .work-list {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .contact-left,
-    .contact-right {
-        flex-basis: 100%;
-    }
-
-    .btn2 {
-        margin: auto;
-    }
-}
-
-
-
-/* =========================================
-   IPAD / TABLET (769px – 1024px)
-   ========================================= */
-@media (max-width: 1024px) {
-
-    nav {
-        padding: 15px 20px;
-    }
-
-    .logo {
-        font-size: 45px;
-    }
-
-    .pro {
-        margin: 50px auto;
-        width: 40vh;
-        height: 40vh;
-        display: block;
-    }
-
-    .header-text {
-        text-align: center;
-        margin-top: 150px;
-    }
-
-    .row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-col-1,
-    .about-col-2 {
-        flex-basis: 100%;
-    }
-
-    .services-list,
-    .work-list {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    form input,
+    form textarea {
+        font-size: 14px;
     }
 }
 
