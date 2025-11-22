@@ -370,65 +370,169 @@ nav .fa-solid{
 }
 
 /*------media-----*/
-@media only screen and (max-width: 600px){
+/* =========================================
+   MOBILE PHONES (0 – 480px)
+   ========================================= */
+@media (max-width: 480px) {
 
-    .header-text{
-        margin-top: 100px;
+    nav {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    nav ul {
+        display: none; /* hide navbar links if you add hamburger */
+    }
+
+    .pro {
+        margin: 20px auto;
+        width: 30vh;
+        height: 30vh;
+        display: block;
+    }
+
+    .header-text {
+        margin-top: 120px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    form input, form textarea {
         font-size: 16px;
     }
-    .header-text h1{
-        font-size: 15px;
+
+    .btn.btn2 {
+        margin: auto;
+        display: block;
     }
-    nav .fa-solid{
-    display: block;
-    font-size: 25px;
-}
-nav ul{
-    background: #ff004f;
-    position: fixed;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100vh;
-    padding-top: 50px;
-    flex-direction: column;
-    z-index: 2;
-   transition: right 0.5s;
-}
-nav ul li{
-    display: block;
-    margin: 25px;
-}
-nav ul .fa-solid{
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-}
-.sub-title{
-    font-size: 40px;
-}
-.about-col-1, .about-col-2{
-    flex-basis: 100%;
-}
-.about-col-1{
-    margin-bottom: 30px;
-}
-.about-col-2{
-    font-size: 14px;
-}
-.tab-links{
-    font-size: 16px;
-    margin-right: 20px;
-}
-.contact-left, .contact-right{
-    flex-basis: 50%;
-}
-.copyright{
-    font-size: 14px;
 }
 
+
+
+/* =========================================
+   SMALL TABLETS / LARGE PHONES (481px – 768px)
+   ========================================= */
+@media (max-width: 768px) {
+
+    nav {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .pro {
+        margin: 30px auto;
+        width: 35vh;
+        height: 35vh;
+        display: block;
+    }
+
+    .header-text {
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .btn2 {
+        margin: auto;
+    }
 }
+
+
+
+/* =========================================
+   IPAD / TABLET (769px – 1024px)
+   ========================================= */
+@media (max-width: 1024px) {
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 45px;
+    }
+
+    .pro {
+        margin: 50px auto;
+        width: 40vh;
+        height: 40vh;
+        display: block;
+    }
+
+    .header-text {
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
 
 #scrollUpBtn {
   position: fixed;
